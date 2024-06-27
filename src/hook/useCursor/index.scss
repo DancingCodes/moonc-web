@@ -1,0 +1,28 @@
+* {
+  cursor: none;
+}
+
+.Cursor {
+  position: fixed;
+  z-index: 999999;
+  width: 30px;
+  height: 30px;
+  background-image: url('/src/assets/image/cursor.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cursorAnimation {
+  animation: cursorAnimation 0.2s linear 0s alternate;
+}
+
+@keyframes cursorAnimation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-60deg);
+  }
+}

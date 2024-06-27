@@ -1,0 +1,9 @@
+// 大于768（pc）
+@media screen and (min-width: 768px) {
+  @import './pc.scss';
+}
+
+//小于768（phone）
+@media screen and (max-width: 768px) {
+  @import './mobile.scss';
+}
