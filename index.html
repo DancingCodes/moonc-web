@@ -1,35 +1,50 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/src/assets/icon/icon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moon</title>
-    <style>
-      .loading {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0,0,0,0.7);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        font-size: 30px;
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonc - Web</title>
+  <style>
+    .moonc-loading {
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 70px;
+      background: linear-gradient(to right, #00F260, #0575E6, #FF416C, #FF4B2B);
+      background-size: 200% 100%;
+      background-position-x: 0;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: moveBackgroundByX 1s linear infinite alternate;
+    }
+
+    @keyframes moveBackgroundByX {
+      from {
+        background-position-x: 0;
       }
-    </style>
-  </head>
-  <body>
-    <div id="root">
-      <div class="loading">
-        <div>😂😂😂</div>
-        <div>资源加载中</div>
-        <div>Moonc の 主 页</div>
-      </div>
-    </div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+      to {
+        background-position-x: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <div class="moonc-loading">Welcome To Moonc - Web</div>
+  </div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
