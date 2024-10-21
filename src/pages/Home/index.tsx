@@ -54,7 +54,7 @@ const Home = () => {
                                     weather ?
                                         (<div>{weather.city} {weather.weather} {weather.temperature}°C {weather.winddirection}风 {weather.windpower} 级</div>)
                                         :
-                                        ''
+                                        '- - -'
                                 }
 
                             </div>
