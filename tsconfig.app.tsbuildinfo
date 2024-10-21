@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/api/music/index.ts","./src/pages/home/index.tsx","./src/types/api/index.ts","./src/types/music/index.ts","./src/utils/getaddres/index.ts","./src/utils/gettime/index.ts","./src/utils/getweather/index.ts","./src/utils/request/index.ts"],"version":"5.6.3"}

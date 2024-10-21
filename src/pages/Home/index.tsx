@@ -4,8 +4,11 @@ import filings from "@/assets/image/filings.png"
 import github from '@/assets/image/home/github.png'
 import wechat from '@/assets/image/home/wechat.png'
 import { useEffect, useState } from "react";
-import weather from "@/utils/getWeather";
+import getWeather, { IWeather } from "@/utils/getWeather";
 import getTime from "@/utils/getTime"
+
+let weather: IWeather | null = null
+getWeather().then(res => weather = res)
 
 const webList: {
     name: string,
@@ -47,7 +50,13 @@ const Home = () => {
                             <div className="timeTool">
                                 <div>{dataTime.date} {dataTime.day}</div>
                                 <div className="timeText">{dataTime.time}</div>
-                                <div>{weather.city} {weather.weather} {weather.temperature}°C {weather.winddirection}风 {weather.windpower} 级</div>
+                                {
+                                    weather ?
+                                        (<div>{weather.city} {weather.weather} {weather.temperature}°C {weather.winddirection}风 {weather.windpower} 级</div>)
+                                        :
+                                        ''
+                                }
+
                             </div>
                         </div>
                         <div className="subsite">

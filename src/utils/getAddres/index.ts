@@ -9,4 +9,4 @@ async function getAddress() {
     return address
 }
 
-export default await getAddress()
+export default getAddress
