@@ -22,11 +22,11 @@ request.interceptors.response.use(
     (response) => {
         nProgress.done();
         if (response.data.status === 500) {
-            ElNotification({
-                title: 'warning',
-                message: response.data.message,
-                type: 'warning',
-            })
+            // ElNotification({
+            //     title: 'warning',
+            //     message: response.data.message,
+            //     type: 'warning',
+            // })
             return Promise.reject(response.data.message);
         }
 
